@@ -1,0 +1,23 @@
+{{> countriesNav}}
+
+<h2>Dishes</h2>
+
+<button class="vegan-btn">vegan dishes</button>
+
+
+
+<ul class="cards">
+  {{#each dishes}}
+  <li class="card">
+    <div class="location">
+      <span class="title">{{name}}</span>
+      <p class="data">{{country}}</p>
+      <p class="data">{{description}}</p>
+      <a href="/dishes/{{id}}/edit">edit dish</a>
+    </div>
+  </li>
+  {{/each}}
+</ul>
+
+
+

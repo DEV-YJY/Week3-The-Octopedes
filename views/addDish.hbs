@@ -1,0 +1,21 @@
+{{> countriesNav}}
+
+<h2>Add a new dish</h2>
+
+<form method="POST" action="/dishes/add" class="form">
+  <label for="name">Dish name</label>
+  <input type="text" id="name" name="name" placeholder="Dish name">
+  
+  <label for="description">Description</label>
+  <textarea rows="3" id="description" name="description" placeholder="Dish description"></textarea>
+
+  <label for="country">Country</label>
+  <select id="country" name="country_id">
+   {{#each countries}}
+    <option value="{{id}}">{{name}}</option>
+   {{/each}}
+  </select>
+
+  <div></div>
+  <button>Add new dish</button>
+</form>

@@ -1,0 +1,34 @@
+{{> countriesNav}}
+
+
+{{!-- {{#each country}}
+<h2>Country: <span class="data">{{countryName}}</span></h2>
+{{/each}} --}}
+
+<div class="gif-wrapper">
+  <img class="octo" src="https://media2.giphy.com/media/WwMHQqMG0yirepFPP8/giphy.gif?cid=ecf05e4780eqtk07fran2bsf1vcbeswpw03g4604q3lamzpb&rid=giphy.gif&ct=g" alt="octo">
+  <img class="octo" src="https://media2.giphy.com/media/WwMHQqMG0yirepFPP8/giphy.gif?cid=ecf05e4780eqtk07fran2bsf1vcbeswpw03g4604q3lamzpb&rid=giphy.gif&ct=g" alt="octo">
+  <h2>Country: <span class="data">{{country}}</span></h2>
+  <img class="octo" src="https://media2.giphy.com/media/WwMHQqMG0yirepFPP8/giphy.gif?cid=ecf05e4780eqtk07fran2bsf1vcbeswpw03g4604q3lamzpb&rid=giphy.gif&ct=g" alt="octo">
+  <img class="octo" src="https://media2.giphy.com/media/WwMHQqMG0yirepFPP8/giphy.gif?cid=ecf05e4780eqtk07fran2bsf1vcbeswpw03g4604q3lamzpb&rid=giphy.gif&ct=g" alt="octo">
+</div>
+<a class="nav" href="/dishes/add/{{country}}">add dish</a>
+<button><a href='/'>Home</a></button>
+
+
+<ul class="cards">
+
+  {{#each dishes}}
+
+  <li class="card">
+    <div class="event">
+      <span class="title">{{dishName}}</span>
+      <div class="time-location">
+        <p>Country: <span class="data">{{countryName}}</span></p>
+      </div>
+    </div>
+    <p class="event-description data">{{description}}</p>
+    <a href="/dishes/{{id}}/edit">edit dish</a>
+  </li>
+  {{/each}}
+</ul>

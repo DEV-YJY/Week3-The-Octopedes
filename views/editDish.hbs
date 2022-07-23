@@ -1,0 +1,31 @@
+{{> countriesNav}}
+
+
+<h2>edit dish: <span class="data">{{dish.name}}</span></h2>
+
+<form method="POST" action="/dishes/edit" class="form">
+  <input type="hidden" name="id" value="{{dish.id}}">
+
+  <label for="name" class="label">  Name </label>
+  <input type="text" id="name" name="name" placeholder="Dish name" value="{{dish.name}}">
+
+  <label for="description" class="label"> Description </label>
+  <textarea rows="5" id="description" name="description"
+    placeholder="Dish description">{{dish.description}}</textarea>
+
+  <label for="country" class="label"> Country </label>
+  <select id="country" name="countryId">
+    {{#each countries}}
+    <option value="{{id}}" {{selected}}>{{name}}</option>
+    {{/each}}
+  </select>
+  
+  <div></div>
+  <button>Update dish</button>
+</form>
+
+<form method="POST" action="/dishes/delete" class="form">
+  <input type="hidden" name="id" value="{{dish.id}}">
+  <div></div>
+  <button class="delete">Delete dish</button>
+</form>
