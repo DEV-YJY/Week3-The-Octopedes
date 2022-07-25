@@ -1,6 +1,6 @@
 # Week 3 project: The Octopedes
 
-This is a cuisine generating application that displays information of the dishes from four countries (Switzerland, Brazil, South Korea and Phillipine).
+This is a cuisine generating application that displays information on the dishes from four countries (Switzerland, Brazil, South Korea and Philippines).
 
 - A user can:
   - View the information about the dish.
